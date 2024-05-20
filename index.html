@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation DASHBOARD</title>
+    
+    <link rel="shortcut icon" href="./icons/fevicon.png" type="image/png">
+    <link rel="stylesheet" href="./css/font-awesome-5.11.2.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-4.3.1.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-grid-4.3.1.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-reboot-4.3.1.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/angular-1.7.8.min.js"></script>
+    <script src="./js/angular-route-1.7.8.min.js"></script>
+    <script src="./js/font-awesome-5.11.2.min.js"></script>
+    <script src="./js/popper-1.14.7.min.js"></script>
+    <script src="./js/bootstrap-4.3.1.min.js"></script>
+    <script src="./js/bootstrap.bundle-4.3.1.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body ng-app="bloodApp" style="background-color: rgb(224, 222, 222);">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top nb">
+        <a href="#" class="navbar-brand"><img src="./icons/logo.png" style="width: 150px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-center" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="navbar-item"><a href="#/!" class="nav-link text-white pop-nav">Admin Home</a></li>
+                <li class="navbar-item"><a href="#!/donation" class="nav-link text-white pop-nav">Register Donation Center</a></li>
+                <li class="navbar-item"><a href="javascript:void(0)" class="nav-link text-white pop-nav" onclick="logout()">Logout</a></li>
+            </ul>   
+        </div>
+    </nav>
+    <main id="main-content mt-5 pt-5" ng-view></main>
+    <footer class="page-footer font-small text-light mt-auto" style="background: linear-gradient(to left bottom,#ee0d0d, #111 60%); box-shadow: 0px 0px 10px 4px #000;">
+        <div class="container text-center text-md-left mt-5">
+            <div class="row mt-1">
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-1">
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3">
+            &copy; <script>document.write(new Date().getFullYear());</script> Copyright | 
+            <a class="text-danger" href="#!"> BloodDonation</a>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/angular-1.7.8.min.js"></script>
+    <script src="./js/angular-route-1.7.8.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+        function redirectToLogin() {
+            if (!isLoggedIn()) {
+                if (!isLoginPage()) {
+                    window.location.href = "/pages/login.html";
+                }
+            }
+        }
+
+        function isLoggedIn() {
+            return localStorage.getItem("loggedIn") === "true";
+        }
+
+        function isLoginPage() {
+            return window.location.pathname.includes("login.html");
+        }
+
+        function logout() {
+            localStorage.removeItem("loggedIn");
+            window.location.href = "/pages/login.html";
+        }
+
+        window.onload = redirectToLogin;
+    </script>
+</body>
+</html>

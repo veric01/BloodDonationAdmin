@@ -1,0 +1,110 @@
+<section class="hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1>Welcome to BLOOD DONATION</h1>
+                <h1> Admin Panel</h1>
+                <p class="lead">Manage blood donors, appointments, and Donation Centers with ease.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div id="form-wrap" class="modal">
+    <span onclick="document.getElementById('form-wrap').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <form name="userRegis" class="modal-content bg-dark text-light" onsubmit="return createNewUser();">
+        <div class="px-4 py-1">
+            <h1 class="formHeader">Sign Up</h1>
+            <p class="formHeader">Please fill in this form to create an account.</p>
+            
+            <div class="h-25" id="signUpAlert"></div>
+            <hr>
+    
+            <div class="form-group">
+                    <label for="Name">Full Name</label>
+                    <input type="text" class="form-control" name="name" placeholder="Full Name">
+            </div>
+    
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="Email">Email</label>
+                    <input type="text" class="form-control" name="email" placeholder="Email">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="Phone">Phone</label>
+                    <input type="tel" class="form-control" name="phone" placeholder="Phone">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="BloodGroup"><b>Blood Group</b></label>
+                <select name="BloodGroup" class="form-control">
+                    <option value="Select" selected>Choose..</option>
+                    <option value="A+">A+</option><option value="A-">A-</option><option value="A1+">A1+</option><option value="A1-">A1-</option><option value="A1B+">A1B+</option><option value="A1B-">A1B-</option><option value="A2+">A2+</option><option value="A2-">A2-</option><option value="A2B+">A2B+</option><option value="A2B-">A2B-</option><option value="AB+">AB+</option><option value="AB-">AB-</option><option value="B+">B+</option><option value="B-">B-</option><option value="O+">O+</option><option value="O-">O-</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="Password">Password</label>
+                    <input type="password" class="form-control" name="password" placeholder="Password">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="ConfirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="signUpCheck">
+                <label class="form-check-label" for="gridCheck">
+                        By creating an account you agree to our <a href="#/!" style="color:dodgerblue">Terms & Policy</a>.
+                </label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <button type="submit" class="btn btn-success w-100">Register</button>
+                </div>
+                <div class="form-group col-md-6">
+                    <button type="reset" class="btn btn-danger w-100">Reset</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<section class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 col-sm-12">
+            <div class="card pop-card pop-trans bg-primary text-light">
+                <div class="card-body">
+                    <h5 class="card-title">Register a New Blood Donor</h5>
+                    <p class="card-text">Register client completely new to blood donation</p>
+                    <a href="Pages/donorDetails.html" class="btn btn-danger text-light">Register new Donor</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="card pop-card pop-trans bg-secondary text-light">
+                <div class="card-body">
+                    <h5 class="card-title">Already a donor?</h5>
+                    <p class="card-text">Sign up for an online account & manage appointments</p>
+                    <a class="btn btn-success text-light" onclick="openSignUp()">Create a New Account</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="card pop-card pop-trans bg-info text-light">
+                <div class="card-body">
+                    <h5 class="card-title">Manage Donors</h5>
+                    <p class="card-text">View and manage registered blood donors</p>
+                    <a href="#!/donation" class="btn btn-warning text-light">Register Donation Center</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br>
+

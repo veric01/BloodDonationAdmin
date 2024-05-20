@@ -1,0 +1,26 @@
+{
+    "name": "blooddonation",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.html",
+    "scripts": {
+        "start": "node server.js",
+        "test": "echo \"No tests yet\" && exit 0"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "author": "Victor Mutisya",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/veric01/"
+    },
+    "homepage": "https://github.com/veric01/",
+    "dependencies": {
+        "express": "^4.17.1",
+        "firebase-admin": "^12.1.0",
+        "mongodb": "^6.5.0",
+        "save": "^2.9.0"
+    }
+}
